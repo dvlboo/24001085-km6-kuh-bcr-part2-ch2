@@ -190,8 +190,7 @@ section {
 
 /* footer */
 footer {
-  padding-left: 9%;
-  padding-right: 9%;
+  padding : 0 9% 0 9%;
 }
 
 .nav-foot {
