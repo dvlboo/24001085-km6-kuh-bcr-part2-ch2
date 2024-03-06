@@ -43,3 +43,6 @@ menuLinks.forEach(link => {
     darkLayer.style.display = "none";
   })
 })
+
+// function buat ke pages findCar
+const toFindCar = () => window.location.href = "/findCar"
