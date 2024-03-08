@@ -28,7 +28,7 @@ class Binar {
       cars = this.populateCars(cacheCars);
     } else {
       const response = await fetch(
-        "https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json"
+        "https://raw.githubusercontent.com/dvlboo/24001085-km6-kuh-bcr-part2-ch2/develop/data/cars.min.json"
       );
       const body = await response.json();
       cars = this.populateCars(body)
