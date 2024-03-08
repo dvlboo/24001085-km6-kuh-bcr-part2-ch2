@@ -21,6 +21,7 @@
   <!-- style -->
   <link rel="stylesheet" href="/index.css">
   <link rel="stylesheet" href="/breakpoint.css">
+  <link rel="stylesheet" href="/findCar.css">
 </head>
 <body>
 
@@ -31,7 +32,7 @@
   <header id="home">
     <!-- <nav class="navbar navbar-expand"> -->
     <nav class="d-flex justify-content-between align-items-center">
-      <a href="#home" class="navbar-brand"><img src="images/assets/logo-bcr.png" alt="" class="logo"></a>
+      <a href="/index.html" class="navbar-brand"><img src="images/assets/logo-bcr.png" alt="" class="logo"></a>
 
       <!-- hidden -->
       <span class="bi bi-list d-lg-none hamburger-menu" id="hamburger-menu"></span>
@@ -46,10 +47,10 @@
           </div>
         </a>
 
-        <a class="nav-link" href="pages/index.html#our-service">Our Sevices</a>
-        <a class="nav-link" href="pages/index.html#why-us">Why Us</a>
-        <a class="nav-link" href="pages/index.html#testimonial">Testimonial</a>
-        <a class="nav-link" href="pages/index.html#faq">FAQ</a>
+        <a class="nav-link" href="/index.html#our-service">Our Sevices</a>
+        <a class="nav-link" href="/index.html#why-us">Why Us</a>
+        <a class="nav-link" href="/index.html#testimonial">Testimonial</a>
+        <a class="nav-link" href="/index.html#faq">FAQ</a>
         <button class="tombol">Register</button>
       </div>
     </nav>
@@ -71,47 +72,49 @@
     </section>
 
     <section class="row">
-      <div class="card">
-        <div class="card-body">
+      <div class="card card-car">
+        <div class="card-body d-flex px-auto">
 
-          <div class="col-md mt-3">
+          <div class="col-md-3 mt-3">
             <label for="driverType" class="form-label">Tipe Driver</label>
             <select class="form-select" id="driverType">
-              <option selected>Pilih Tipe Driver</option>
-              <option>Driver 1</option>
-              <option>Driver 2</option>
-              <option>Driver 3</option>
+              <option selected hidden>Pilih Tipe Driver</option>
+              <option>Dengan Sopir</option>
+              <option>Tanpa Sopir (Lepas Kunci)</option>
             </select>
           </div>
 
-          <div class="col-md mt-3">
+          <div class="col-md-2 mt-3">
             <label for="pickupDate" class="form-label">Tanggal</label>
             <input type="date" class="form-control" id="pickupDate" placeholder="Pilih Tanggal">
           </div>
           
-          <div class="col-md mt-3">
+          <div class="col-md-3 mt-3">
             <label for="pickupTime" class="form-label">Waktu Jemput/Ambil</label>
             <select class="form-select" id="pickupTime">
-              <option selected>Pilih Waktu Jemput</option>
-              <option>10.00 AM</option>
-              <option>10.00 AM</option>
-              <option>10.00 AM</option>
+              <option selected hidden>Pilih Waktu Jemput</option>
+              <option>08.00 WIB</option>
+              <option>09.00 WIB</option>
+              <option>10.00 WIB</option>
+              <option>11.00 WIB</option>
+              <option>12.00 WIB</option>
             </select>
           </div>
 
-          <div class="col-md mt-3">
-            <label for="passengerCount" class="form-label">Jumlah Penumpang</label>
-            <input type="number" class="form-control" id="passengerCount" placeholder="Jumlah Penumpang">
+          <div class="col-md-3 mt-3">
+            <label for="passengerCount" class="form-label">Jumlah Penumpang (optional)</label>
+            <input type="number" class="form-control" id="passengerCount" placeholder="Jumlah Penumpang" min="1">
           </div>
 
-            <div class="col-md mt-3">
-              <button class="tombol">Cari Mobil</button>
+            <div class="col-md-2 tombol-cari">
+              <button class="tombol" onclick="findCarFilter()" id="search-car">Cari Mobil</button>
           </div>
         </div>
       </div>            
     </section>
 
-    <div id="listCars"></div>
+    <div id="view-cars"></div>
+
   </main>
 
   <!-- footer -->
@@ -154,7 +157,13 @@
     </div>
   </footer>
   
+  <!-- script -->
   <script src="scripts/landing.js"></script>
+  <script src="scripts/binar.js"></script>
+  <script src="scripts/cars.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- <script src="scripts/findCars.js"></script> -->
   <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

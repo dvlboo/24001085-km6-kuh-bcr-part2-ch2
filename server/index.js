@@ -12,6 +12,8 @@ const server = http.createServer((req, res) => {
     filePath = path.join(__dirname, '../public/pages/index.html');
   } else if (req.url === '/findCar') {
     filePath = path.join(__dirname, '../public/pages/findCar.html');
+  } else if (req.url === '/exm') {
+    filePath = path.join(__dirname, '../public/pages/index.example.html');
   } else if (req.url.endsWith('.css')) {
     // serve css filenyaa
     filePath = path.join(__dirname, '../public/css', req.url);
@@ -21,6 +23,8 @@ const server = http.createServer((req, res) => {
   } else if (req.url.startsWith('/scripts')) {
     // serve JavaScript filenyaaa
     filePath = path.join(__dirname, '../public', req.url);
+  } else if (req.url.startsWith('/data')) {
+    filePath = path.join(__dirname, '../data', req.url);
   } else {
     // Handle 404 Not Found
     res.writeHead(404, { 'Content-Type': 'text/html' });
@@ -49,6 +53,8 @@ const server = http.createServer((req, res) => {
       contentType = 'image/jpeg';
     } else if (filePath.endsWith('.js')) {
       contentType = 'text/javascript';
+    } else if (filePath.endsWith('.json')) {
+      contentType = 'text/json'
     }
 
     res.writeHead(200, { 'Content-Type': contentType });
@@ -59,5 +65,7 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
 
 // jujurly pusing bikinyaaaaa 😅, tpi bisaaaa

@@ -1,0 +1,9 @@
+.card-car,
+.card-car input,
+.card-car select {
+  font-size: 14px !important;
+}
+
+.tombol-cari {
+  margin-top: 2.7rem;
+}
