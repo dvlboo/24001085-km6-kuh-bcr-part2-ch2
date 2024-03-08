@@ -1,39 +1,44 @@
-# Binar: Challenge 04
+# BINAR FSW CH2 - BINAR CAR RENTAL - PART 2
 
-- Mulai modifikasi file `server/index.js` apabila ingin membuat HTTP server.
-- Mulai modifikasi folder `public` apabila ingin memodifikasi HTML.
+## -> Created Using 
+<p align="center">
+  <a style="margin: 5px 30px" href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+  	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="35" height="35"/> 
+  </a> 
+  <a style="margin: 5px 30px" href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+  	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css3" width="35" height="35"/> 
+  </a> 
+  <a style="margin: 5px 30px" href="https://www.w3schools.com/js/" target="_blank" rel="noreferrer"> 
+  	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="35" height="35"/> 
+  </a>
+  <a style="margin: 5px 30px" href="https://getbootstrap.com" target="_blank" rel="noreferrer"> 
+  	<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" alt="bootstrap" width="35" height="35"/> 
+  </a>
+</p>
 
-# `Binar` class
+## -> `How To Run`
+Using command `npm run dev` in your terminal and open on `localhost:3001`
 
-Class ini berisi 1 static method saja, yang berfungsi untuk mengambil data mobil dari internet.
+## -> `HTTP Server`
+I also created a server in [`server/index.js`](./server/index.js)
 
-```typescript
-interface Car {
-  id: string;
-  plate: string;
-  manufacture: string;
-  model: string;
-  image: string;
-  rentPerDay: number;
-  capacity: number;
-  description: string;
-  transmission: string;
-  available: boolean;
-  type: string;
-  year: string;
-  options: Array<string>;
-  specs: Array<string>;
-}
+## -> `OOP Data`
+- [`public/scripts/binar.js`](./public/scripts/binar.js)
+- [`public/scripts/cars.js`](./public/scripts/cars.js)
+- [`public/scripts/app.js`](./public/scripts/app.js)
+- [`public/scripts/main.js`](./public/scripts/main.js)
 
-interface Binar {
-  listCars(filterer: (car: Car) => boolean): Array<Car>
-}
-```
+## -> `API Cars Data`
+I modified the provided API data, then it looked like this : 
+[`/dvlboo/24001085-km6-kuh-bcr-part2-ch2/develop/data/cars.min.json`](https://raw.githubusercontent.com/dvlboo/24001085-km6-kuh-bcr-part2-ch2/develop/data/cars.min.json)
 
-Method `listCars` ini akan menerima fungsi yang mana harus mengembalikan `boolean` sebagai nilainya. 
-Fungsi ini akan dijalankan untuk masing-masing item di dalam list of cars, yang mana jika nilainya `true`,
-maka akan ditampilkan di dalam list tersebut.
+## -> `Page View`
+### Before Find Data
+![image](https://github.com/dvlboo/24001085-km6-kuh-bcr-part2-ch2/assets/92429096/0feafcdd-c675-4f14-879b-570bf9f504f7)
 
-# Tips
+### After Find Data
+![image](https://github.com/dvlboo/24001085-km6-kuh-bcr-part2-ch2/assets/92429096/423d595c-0f93-4346-a15b-4856d0eaaf27)
 
-Just, hack it bro!
+# Quotes of The Hack
+
+i've been cookin' code, chef! 🍹🔥
